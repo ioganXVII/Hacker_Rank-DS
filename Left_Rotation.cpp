@@ -20,12 +20,11 @@ vector<string> split(const string &);
 vector<int> rotateLeft(int d, vector<int> arr) {
     for(int a = 0; a < d; a++){
         int temp = arr[0];
-        for(int b = 0; b < arr.size(); b++){
+        for(int b = 0; b < arr.size()-1; b++){
             arr[b] = arr[b+1];
-            if(b == arr.size()-1){
-                arr[b] = temp;
-            }
+            
         }
+        arr[arr.size()-1] = temp;
     }
     return arr;
 }
