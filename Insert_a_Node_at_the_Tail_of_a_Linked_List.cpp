@@ -58,10 +58,9 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
  
  //------------------------------------------------------------------------------------------------//
  
- 
 SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
-    SinglyLinkedListNode* temp = (SinglyLinkedListNode*)malloc(sizeof(SinglyLinkedListNode*));
-    SinglyLinkedListNode* Tail = (SinglyLinkedListNode*)malloc(sizeof(SinglyLinkedListNode*));
+    SinglyLinkedListNode* temp = new SinglyLinkedListNode(data);
+    SinglyLinkedListNode* Tail = new SinglyLinkedListNode(0);
     Tail = head;
     temp->data = data;
     if(head == NULL) return head = temp;
@@ -76,8 +75,6 @@ SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
    
     return head;
 }
-
-
 
 //------------------------------------------------------------------------------------------------//
 
